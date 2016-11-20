@@ -7,8 +7,8 @@ A template for a simple personal website which is easy to customize.
 Install docker
 
 ## setup
+Steps to customize personal-website's images and text.
 
-Use the following steps to customize personal-website's images and text:
 1. create Dockerfile in a local working directory (see below)
 2. create an images folder and add updated versions of the files in the images folder
 3. create a local copy of app.js and replace text
@@ -23,8 +23,6 @@ WORKDIR /usr/share/nginx/html
 COPY app.js /usr/share/nginx/html
 ADD images/* /usr/share/nginx/html/images/
 ```
-
-
 
 ## build and run
 ```
