@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
 <head>
         <meta charset="utf-8" />
-        <title>Your Name</title>
+        <title>My Website</title>
         <style>
         header {
           border-width: 0px;
@@ -33,66 +35,68 @@
 
         </style>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
   <header align="center">
     <img src="images/banner.png" alt="Banner" />
   </header>
+  <div>
+    <p/>
+    <table width="100%">
+      <tr width="100%">
+        <td width="33%" align="right"></td>
+        <td width="33%" align="center">
+          <p>
+            <h1>Projects</h1>
+            {{ projectDescription }}
+          </p>
+          <br/>
+        </td>
+        <td width="33%"/>
+      </tr>
+    </table>
+    <div align="center">
+    <a href="{{ project1Url }}"><img src="images/project-1.png" hspace="10" width="200" height="200" alt="Project 1" /></a>
+    <a href="{{ project2Url }}"><img src="images/project-2.png" hspace="10" width="200" height="200" alt="Project 2" /></a>
+    <a href="{{ project3Url }}"><img src="images/project-3.png" hspace="10" width="200" height="200" alt="Project 3" /></a>
+    </div>
+    <p/><p/>
   <p/>
-  <table width="100%">
-    <tr width="100%">
-      <td width="33%" align="right"></td>
-      <td width="33%" align="center">
-        <p>
-          <h1>Projects</h1>
-          Here are some personal projects that help me
-          keep up to date with technology.
-        </p>
-        <br/>
-      </td>
-      <td width="33%"/>
-    </tr>
-  </table>
-  <div align="center">
-  <a href="project-1"><img src="images/project-1.png" hspace="10" width="200" height="200" alt="Project 1" /></a>
-  <a href="project-2"><img src="images/project-2.png" hspace="10" width="200" height="200" alt="Project 2" /></a>
-  <a href="project-3"><img src="images/project-3.png" hspace="10" width="200" height="200" alt="Project 3" /></a>
-  </div>
-  <p/><p/>
-<p/>
-<p/>
-<div>
-  <table width="100%">
-    <tr>
-      <td width="33%" align="right"></td>
-      <td width="33%">
-        <p align="center">
-          <img src="images/profile.png" border="1"   alt="Profile" />
-        </p>
-      </td>
-      <td width="33%"/>
-    </tr>
-    <tr width="100%">
-      <td width="33%" align="right"></td>
-      <td width="33%">
-        <p align="center">
-          Bio Summary.
-        </p>
-      </td>
-      <td width="33%"/>
-    </tr>
-  </table>
+  <p/>
+  <div>
+    <table width="100%">
+      <tr>
+        <td width="33%" align="right"></td>
+        <td width="33%">
+          <p align="center">
+            <img src="images/profile.png" border="1" alt="Profile" />
+          </p>
+        </td>
+        <td width="33%"/>
+      </tr>
+      <tr width="100%">
+        <td width="33%" align="right"></td>
+        <td width="33%">
+          <p align="center">
+            {{ bioSummary }}
+          </p>
+        </td>
+        <td width="33%"/>
+      </tr>
+    </table>
 
-  <table width="100%">
-    <tr>
-      <td align="center">
-        <p>
-          <a href="https://github.com"><img src="images/github-icon.png" height="50" width="50" alt="github"/></a>
-          <a href="https://www.linkedin.com"><img src="images/linkedin-icon.png" height="50" width="50" alt="linkedin"/></a>
-        </p>
-      </td>
-    </tr>
-  </table>
-  <p/><p/>
-</div>
+    <table width="100%">
+      <tr>
+        <td align="center">
+          <p>
+            <a href="https://github.com/{{ githubUserId }}"><img src="images/github-icon.png" height="50" width="50" alt="github"/></a>
+            <a href="https://www.linkedin.com/in/{{ linkedinUserId }}"><img src="images/linkedin-icon.png" height="50" width="50" alt="linkedin"/></a>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p/><p/>
+  </div>
+  </div>
+
 </body>
 </html>
