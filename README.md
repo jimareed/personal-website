@@ -3,10 +3,9 @@ Template for a simple personal website
 
 
 ## install
-{project}=personal-website
 ```
-git clone https://github.com/jimareed/{project}
-cd {project}
+git clone https://github.com/jimareed/personal-website
+cd personal-website
 docker build . -t website-image
 docker run -p 80:80 -d --name website website-image
 ```
